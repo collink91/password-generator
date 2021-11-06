@@ -5,11 +5,23 @@ var pwLower = confirm("Do you want to add lower case characters?");
 var pwUpper = confirm("Do you want to add upper case characters?");
 var pwNum = confirm("Do you want to add numeric characters?");
 var pwSpecial = confirm("Do you want to add special characters?");
+
+// if user selects boolean value of true for pwLower, then lowerOptions are included in the password. hasLower variable confirms the value of pwUpper
+
+
+
+
+
+
+
+
+
+
 var random = {
-  lower: generateLower,
-  upper: generateUpper,
-  special: generateSpecial,
-  number: generateNum,
+  lower: generateLower(),
+  upper: generateUpper(),
+  special: generateSpecial(),
+  number: generateNum(),
 };
 function generateLower() {
   var lowerOptions = [
@@ -92,12 +104,26 @@ function countVer(pwLength) {
     return false;
   }
 }
-console.log(generateLower());
-console.log(generateUpper());
-console.log(generateNum());
-console.log(generateSpecial());
+
+var typesCount = pwLower + pwUpper + pwNum + pwSpecial;
+
+
+console.log(random)
+
+// console.log(generateLower());
+// console.log(generateUpper());
+// console.log(generateNum());
+// console.log(generateSpecial());
 //Driver function. Check each condition, generate some sort of for loop,
-function generatePassword() {}
+
+function generatePassword(pwLower, pwUpper, pwNum, pwSpecial, pwLength) {
+
+
+typesCount
+
+}
+console.log(typesCount)
+generatePassword()
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
 // Write password to the #password input
@@ -108,7 +134,15 @@ function writePassword() {
 }
 //create generate password function
 // Add event listener to generate button
-generateBtn.addEventListener("click", writePassword);
+
+
+
+
+// generateBtn.addEventListener("click", writePassword);
+
+
+
+
 // Prompt w/ validation to see how many characters they want (length of password) between 8 and 128 characters
 // Confirm - ask if they want special characters in the password
 // Confirm - uppercase
